@@ -8,8 +8,8 @@ namespace MainName
         static void Main(string[] args)
         {
             Menu menu = new Menu();
-            menu.MenuForTwoDimArray();
-
+            menu.MainMenu();
+            
             Console.WriteLine();
             return;
         }
