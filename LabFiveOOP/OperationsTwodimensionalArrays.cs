@@ -439,13 +439,27 @@ namespace OperationsOverArrays
                 {
                     for (uint j = 0; j < tmpTwoDimArray.GetLength(1); j++)
                     {
-                        if (i == k)
+                        try
                         {
-                            Console.Write($"{i + 1}-я строка, {j + 1}-й столбец: ");
-                            tmpTwoDimArray[i, j] = int.Parse(Console.ReadLine());
-                        } 
-                        else
-                            tmpTwoDimArray[i, j] = twoDimArray[i - 1, j];
+                            if (i == k)
+                            {
+                                Console.Write($"{i + 1}-я строка, {j + 1}-й столбец: ");
+                                tmpTwoDimArray[i, j] = int.Parse(Console.ReadLine());
+
+                            }
+                            else
+                                tmpTwoDimArray[i, j] = twoDimArray[i - 1, j];
+                        }
+                        catch (FormatException fex)
+                        {
+                            j -= 1;
+                            Console.WriteLine(fex.Message);
+                        }
+                        catch (OverflowException oex)
+                        {
+                            j -= 1;
+                            Console.WriteLine(oex.Message);
+                        }
                     }
                 }
                 twoDimArray = tmpTwoDimArray;
