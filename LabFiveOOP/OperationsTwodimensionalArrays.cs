@@ -273,8 +273,8 @@ namespace OperationsOverArrays
                     Console.Write("\nДобавить строку с номером: ");
                     k = uint.Parse(Console.ReadLine());
                     if (k == 0)
-                       throw new Exception("\nДля пользователя нет нулевой строки, повторите ввод...");
-                       
+                        throw new Exception("\nДля пользователя нет нулевой строки, повторите ввод...");
+
                     break;
                 }
                 catch (FormatException fex)
@@ -291,8 +291,8 @@ namespace OperationsOverArrays
                 }
 
             } while (true);
+            k--;
 
-            k --;
             if (k > twoDimArray.GetLength(0) || k < 0)
             {
                 Console.WriteLine($"\nВ данном двумерном массиве {twoDimArray.GetLength(0)} строк, " +
@@ -341,6 +341,7 @@ namespace OperationsOverArrays
             } while (true);
 
             return twoDimArray;
+            
         }
 
         private void InputStrNull_()

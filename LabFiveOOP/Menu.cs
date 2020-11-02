@@ -122,8 +122,12 @@ namespace OperationsOverArrays
                             m.CoutTwoDimArray();
                             break;
                         case 3:
-                            m.AddStr(ref twoDimArray);
-                            m.CoutTwoDimArray();
+                            if (twoDimArray.Length != 0)
+                            {
+                                m.AddStr(ref twoDimArray);
+                                m.CoutTwoDimArray();
+                            }
+                            else Console.WriteLine("\nСначала создайте думерный массив..");
                             break;
                         case 4:
                             can = true;
