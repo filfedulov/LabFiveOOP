@@ -16,7 +16,9 @@ namespace OperationsOverArrays
             {
                 try
                 {
-                    Console.WriteLine("\n1.) Создать двумерный массив заполненный случайными числами;\n2.) Создать двумерный массив и заполнить с клавиатуры;\n3.) Вернуться в меню..\n");
+                    Console.WriteLine("\n1.) Создать двумерный массив заполненный случайными числами;" +
+                        "\n2.) Создать двумерный массив и заполнить с клавиатуры;" +
+                        "\n3.) Вернуться в меню..\n");
                     uint choice = uint.Parse(Console.ReadLine());
                     if (choice == 1)
                     {
@@ -143,6 +145,7 @@ namespace OperationsOverArrays
                     Console.WriteLine(oex.Message);
                 }
             } while (true);
+            
             do
             {
                 try
@@ -188,6 +191,7 @@ namespace OperationsOverArrays
                 }
 
             } while (true);
+            
             do
             {
                 try
